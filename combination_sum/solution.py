@@ -23,11 +23,11 @@ class Solution(object):
         del self.curr_stack[curr_length:]
 
     def CombinationSum(self, candidates, target):
-        """
+        '''
         :type candidates: List[int]
         :type target: int
         :rtype: List[List[int]]
-        """
+        '''
         self.OneSum(candidates, target, 0)
         return list(self.outputs)
 
@@ -35,9 +35,9 @@ class Solution(object):
 def CheckResult(case, expect, result):
     print('Case:', case)
     if sorted(expect) == sorted(result):
-        print("Expected:", expect, "Test PASSED.")
+        print('Expected:', expect, 'Test PASSED.')
     else:
-        print("Expected:", expect, "result:", result, "test FAILED!")
+        print('Expected:', expect, 'result:', result, 'test FAILED!')
 
 
 CASES = [
