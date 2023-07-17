@@ -32,7 +32,8 @@ class Solution(object):
         return list(self.outputs)
 
 
-def CheckResult(expect, result):
+def CheckResult(case, expect, result):
+    print('Case:', case)
     if sorted(expect) == sorted(result):
         print("Expected:", expect, "Test PASSED.")
     else:
@@ -69,4 +70,4 @@ EXPECTS = [
 
 for i, (candidates, target) in enumerate(CASES):
     result = Solution().CombinationSum(candidates, target)
-    CheckResult(EXPECTS[i], result)
+    CheckResult((candidates, target), EXPECTS[i], result)

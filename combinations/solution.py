@@ -35,7 +35,8 @@ class Solution(object):
         return result
 
 
-def CheckResult(expect, result):
+def CheckResult(case, expect, result):
+    print('Case:', case)
     if sorted(expect) == sorted(result):
         print("Expected:", expect, "Test PASSED.")
     else:
@@ -54,4 +55,4 @@ EXPECTS = [
 
 for i, (n, k) in enumerate(CASES):
     result = Solution().Combine(n, k)
-    CheckResult(EXPECTS[i], result)
+    CheckResult((n, k), EXPECTS[i], result)

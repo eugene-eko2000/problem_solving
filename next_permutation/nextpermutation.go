@@ -26,7 +26,8 @@ func nextPermutation(nums []int) {
 	sort.Ints(nums[i:])
 }
 
-func testCaseResult(expect, result []int) {
+func testCaseResult(cs, expect, result []int) {
+	fmt.Println("Case:", cs)
 	if reflect.DeepEqual(result, expect) {
 		fmt.Println("Expected:", expect, "test PASSED.")
 	} else {
@@ -48,7 +49,8 @@ func main() {
 	}
 
 	for i := range cases {
-		nextPermutation(cases[i])
-		testCaseResult(expects[i], cases[i])
+		casecopy := append([]int{}, cases[i]...)
+		nextPermutation(casecopy)
+		testCaseResult(cases[i], expects[i], casecopy)
 	}
 }
