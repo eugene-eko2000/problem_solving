@@ -8,7 +8,7 @@
 class Solution
 {
 public:
-  std::vector<int> TopKFrequent(const std::vector<int> &nums, int k)
+  std::vector<int> TopKFrequent(const std::vector<int> &nums, int k) const
   {
     std::unordered_map<int, int> hist;
     for (int n : nums)
@@ -32,7 +32,7 @@ public:
   void CheckResult(
       const std::pair<std::vector<int>, int> &cs,
       const std::vector<int> &expect,
-      const std::vector<int> &result)
+      const std::vector<int> &result) const
   {
     std::cout << "Case: " << cs << "\n";
     if (expect == result) {
