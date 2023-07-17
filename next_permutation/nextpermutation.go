@@ -11,10 +11,9 @@ func nextPermutation(nums []int) {
 	for i = len(nums) - 1; i > 0 && nums[i-1] >= nums[i]; i-- {
 	}
 	if i > 0 {
-		var j int
 		k := nums[i]
 		ki := i
-		for j = i; j < len(nums); j++ {
+		for j := i; j < len(nums); j++ {
 			if nums[j] > nums[i-1] && nums[j] < k {
 				ki = j
 				k = nums[j]
