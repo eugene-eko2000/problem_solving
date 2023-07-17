@@ -1,7 +1,7 @@
 # Combinations
 
 ## Problem description
-https://leetcode.com/problems/combinations/submissions/
+https://leetcode.com/problems/combinations/description
 
 ## Pre-requisistes
 Python installed, https://www.python.org/downloads/
