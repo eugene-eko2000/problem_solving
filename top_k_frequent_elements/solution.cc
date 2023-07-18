@@ -1,9 +1,8 @@
-#include <iostream>
 #include <queue>
 #include <unordered_map>
 #include <vector>
 
-#include "prettyprint.hpp"
+#include "../result_check/result_check.h"
 
 class Solution {
 public:
@@ -23,18 +22,6 @@ public:
     }
     return result;
   }
-
-  void CheckResult(const std::pair<std::vector<int>, int> &cs,
-                   const std::vector<int> &expect,
-                   const std::vector<int> &result) const {
-    std::cout << "Case: " << cs << "\n";
-    if (expect == result) {
-      std::cout << "Expected: " << expect << ", test PASSED.\n";
-    } else {
-      std::cout << "Expected: " << expect << ", result: " << result
-                << ", test FAILED!\n";
-    }
-  }
 };
 
 int main(int, char **) {
@@ -53,7 +40,7 @@ int main(int, char **) {
   for (int i = 0; i < cases.size(); ++i) {
     const auto &cs = cases[i];
     std::vector<int> result = solution.TopKFrequent(cs.first, cs.second);
-    solution.CheckResult(cs, expects[i], result);
+    CheckResult(cs, expects[i], result);
   }
   return 0;
 }
