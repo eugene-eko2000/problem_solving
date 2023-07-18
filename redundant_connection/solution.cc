@@ -6,25 +6,27 @@
 
 class Solution {
 public:
-  std::vector<int> FindRedundantConnection(const std::vector<std::vector<int>>& edges) {
+  std::vector<int>
+  FindRedundantConnection(const std::vector<std::vector<int>> &edges) {
     std::vector<std::vector<int>> graph(edges.size());
-    for (const auto& edge : edges) {
+    for (const auto &edge : edges) {
       graph[edge[0] - 1].push_back(edge[1]);
       graph[edge[1] - 1].push_back(edge[0]);
     }
     for (int i = 0; i < graph.size(); ++i) {
       if (graph[i].size() == 1) {
         // Go through terminator edge and its connections.
-        std::vector<int>* curr_node = &graph[i];
+        std::vector<int> *curr_node = &graph[i];
         int curr_node_idx = i;
         for (; curr_node->size() == 1;) {
-          std::vector<int>* next_node = &graph[(*curr_node)[0] - 1];
+          std::vector<int> *next_node = &graph[(*curr_node)[0] - 1];
           int j = 0;
-          for (; (*next_node)[j] != curr_node_idx + 1; ++j) {}
+          for (; (*next_node)[j] != curr_node_idx + 1; ++j) {
+          }
           std::swap((*next_node)[j], (*next_node)[next_node->size() - 1]);
-          next_node->pop_back();  // if not in the loop then size becomes 1.
+          next_node->pop_back(); // if not in the loop then size becomes 1.
           curr_node_idx = (*curr_node)[0] - 1;
-          curr_node->pop_back();  // turns into an empty vector.
+          curr_node->pop_back(); // turns into an empty vector.
           curr_node = next_node;
         }
       }
@@ -36,7 +38,7 @@ public:
       }
       return edges[i];
     }
-    return {};  // Should never happen
+    return {}; // Should never happen
   }
 };
 
