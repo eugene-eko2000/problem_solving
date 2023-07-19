@@ -2,7 +2,7 @@
 #include <queue>
 #include <vector>
 
-#include "../result_check/result_check.h"
+#include "result_check/result_check.h"
 
 class Solution {
 public:
