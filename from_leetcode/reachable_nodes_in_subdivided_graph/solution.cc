@@ -82,7 +82,7 @@ public:
 
 using TestCase = std::tuple<std::vector<std::vector<int>>, int, int>;
 
-int main(int, char **) {
+int main() {
   const std::vector<TestCase> cases = {
       std::make_tuple(
           std::vector<std::vector<int>>({{0, 1, 10}, {0, 2, 1}, {1, 2, 2}}), 6,

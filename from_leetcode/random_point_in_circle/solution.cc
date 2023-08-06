@@ -31,12 +31,12 @@ public:
     }
 };
 
-int main(int, char **) {
-  Solution solution(1.0, 0.0, 0.0);
+int main() {
+    Solution solution(1.0, 0.0, 0.0);
 
-  for (int i = 0; i < 100; ++i) {
-    std::vector<double> result = solution.RandPoint();
-    std::cout << result[0] << "," << result[1] << "\n";
-  }
-  return 0;
+    for (int i = 0; i < 100; ++i) {
+      std::vector<double> result = solution.RandPoint();
+      std::cout << result[0] << "," << result[1] << "\n";
+    }
+    return 0;
 }

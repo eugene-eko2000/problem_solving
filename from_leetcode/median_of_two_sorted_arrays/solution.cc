@@ -55,7 +55,7 @@ public:
   }
 };
 
-int main(int, char **) {
+int main() {
   const std::vector<std::tuple<std::vector<int>, std::vector<int>>> cases = {
       std::make_tuple(std::vector<int>({1, 3}), std::vector<int>({2})),
       std::make_tuple(std::vector<int>({1, 2}), std::vector<int>({3, 4})),

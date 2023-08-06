@@ -84,7 +84,7 @@ public:
   }
 };
 
-int main(int, char **) {
+int main() {
   const std::vector<std::tuple<std::vector<int>, std::vector<int>,
                                std::vector<std::vector<int>>>>
       cases = {

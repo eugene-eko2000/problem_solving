@@ -35,7 +35,7 @@ public:
   }
 };
 
-int main(int, char **) {
+int main() {
   const std::vector<std::pair<std::string, std::string>> cases = {
       std::make_pair("1807", "7810"),
       std::make_pair("1123", "0111"),

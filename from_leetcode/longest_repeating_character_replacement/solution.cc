@@ -41,7 +41,7 @@ public:
   }
 };
 
-int main(int, char **) {
+int main() {
   const std::vector<std::pair<std::string, int>> cases = {
       std::make_pair("ABAB", 2),
       std::make_pair("AABABBA", 1),

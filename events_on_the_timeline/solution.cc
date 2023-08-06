@@ -71,7 +71,7 @@ public:
   }
 };
 
-int main(int, char**) {
+int main() {
   EventsOnTimeline eot;
 
   eot.AddEvent(12, 7);

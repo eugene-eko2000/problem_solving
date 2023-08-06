@@ -35,7 +35,7 @@ public:
     return max_eq;
   }
 };
-int main(int, char **) {
+int main() {
   const std::vector<std::pair<std::string, int>> cases = {
       std::make_pair("TTFF", 2),
       std::make_pair("TFFT", 1),

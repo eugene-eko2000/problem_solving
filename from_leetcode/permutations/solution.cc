@@ -39,7 +39,7 @@ public:
   }
 };
 
-int main(int, char **) {
+int main() {
   const std::vector<std::vector<int>> cases = {
       {1, 2, 3},
       {0, 1},

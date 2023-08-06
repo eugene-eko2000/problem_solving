@@ -24,7 +24,7 @@ public:
   }
 };
 
-int main(int, char **) {
+int main() {
   const std::vector<std::pair<std::vector<int>, int>> cases = {
       std::make_pair(std::vector<int>({1, 1, 1, 2, 2, 3}), 2),
       std::make_pair(std::vector<int>({1}), 1),
